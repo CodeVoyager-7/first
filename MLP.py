@@ -1,3 +1,5 @@
+# 所属单位：中国 成都，西南民族大学（Southwest  University of Nationality，or Southwest Minzu University）, 计算机科学与工程学院.
+# 指导老师：周伟老师
 import time
 import pandas as pd
 import numpy as np
@@ -156,3 +158,4 @@ print("总体平均误差:", means.mean())
 end_time = time.time()
 
 print(f"总耗时：{end_time - start_time : .3f}秒")
+
