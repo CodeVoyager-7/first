@@ -1,11 +1,4 @@
-# 时间：2024年6月8号  Date： June 16, 2024
-# 文件名称 Filename： 03-main.py
-# 编码实现 Coding by： Hongjie Liu , Suiwen Zhang 邮箱 Mailbox：redsocks1043@163.com
-# 所属单位：中国 成都，西南民族大学（Southwest  University of Nationality，or Southwest Minzu University）, 计算机科学与工程学院.
-# 指导老师：周伟老师
-# coding=utf-8
 import time
-
 import pandas as pd
 import numpy as np
 from sklearn.metrics import accuracy_score, r2_score, mean_squared_error
@@ -161,4 +154,5 @@ print("各项指标平均误差为：\n", means)
 print("总体平均误差:", means.mean())
 
 end_time = time.time()
+
 print(f"总耗时：{end_time - start_time : .3f}秒")
