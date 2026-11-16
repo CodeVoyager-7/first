@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: iot-project-ballot
+    runtime: python
+    autoDeployTrigger: commit
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run_web_app.py
+    healthCheckPath: /api/healthz
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: UVICORN_RELOAD
+        value: "false"
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: APP_DATA_DIR
+        value: /var/data/iot_project
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: VISION_MODEL_PROVIDER
+        sync: false
+      - key: VISION_MODEL_API_KEY
+        sync: false
+      - key: VISION_MODEL_NAME
+        sync: false
+      - key: VISION_MODEL_API_URL
+        sync: false
+    disk:
+      name: iot-project-data
+      mountPath: /var/data
+      sizeGB: 5

@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+output/
+webapp_data/
+
+.env
+*.log
+*.tmp
